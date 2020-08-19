@@ -1,9 +1,9 @@
-package edu.usfca.wrapper;
+package edu.usfca.collections_util;
 
 import java.util.ArrayList;
 
-public class ArrayList_desc {
-    public ArrayList_desc() {
+public class Array_List {
+    public Array_List() {
     }
 
     public static void main(String[] args) {
