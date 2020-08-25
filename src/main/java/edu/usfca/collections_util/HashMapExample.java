@@ -1,4 +1,4 @@
-package collections;
+package edu.usfca.collections_util;
 
 import java.util.HashMap;
 /** Simple example of using a hash map to store word frequencies */

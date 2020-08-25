@@ -1,4 +1,4 @@
-package collections;
+package edu.usfca.collections_util;
 
 import java.util.*;
 

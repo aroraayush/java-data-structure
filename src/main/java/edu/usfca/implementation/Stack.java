@@ -1,4 +1,4 @@
-package destroyingObjects;
+package edu.usfca.implementation;
 
 /** Stack implementation.
  * Demonstrates how some objects cannot be deleted by the garbage collector unless
