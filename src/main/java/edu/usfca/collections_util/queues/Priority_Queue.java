@@ -1,10 +1,10 @@
-package edu.usfca.collections_util;
+package edu.usfca.collections_util.queues;
 
 // An unbounded priority queue based on a priority heap
 // A priority queue does not permit null elements
 
-// The elements of the priority queue are ordered according to their 
-// natural ordering, or by a Comparator provided at queue construction time, 
+// The elements of the priority queue are ordered according to their
+// natural ordering, or by a Comparator provided at queue construction time,
 // depending on which constructor is used
 // We can’t create PriorityQueue of Objects that are non-comparable
 // Ties are broken arbitrarily.
@@ -24,6 +24,6 @@ import java.util.PriorityQueue;
 
 public class Priority_Queue {
     public static void main(String[] args) {
-        
+
     }
 }
