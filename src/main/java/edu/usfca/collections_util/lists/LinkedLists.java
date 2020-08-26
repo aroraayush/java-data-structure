@@ -3,9 +3,9 @@
 // object with a data part and address part.
 
 // - Each element is known as a node.
-// - We don’t have to specify size in advance, the more elements we 
+// - We don’t have to specify size in advance, the more elements we
 //      add to the chain, the bigger the chain gets.
-// - Due to the dynamicity and ease of insertions and deletions, they 
+// - Due to the dynamicity and ease of insertions and deletions, they
 //      are preferred over the arrays.
 
 // 1. boolean add(Object o)
@@ -17,7 +17,7 @@
 // 6. void addLast(Object o)
 // 7. void clear()
 // 8. Object clone()
-package edu.usfca.collections_util;
+package edu.usfca.collections_util.lists;
 
 import static java.lang.System.out;
 
@@ -27,10 +27,10 @@ import java.util.Collection;
 import java.util.LinkedList;
 
 public class LinkedLists {
-    
+
     private static boolean returnResult;
     public static void main(String[] args) {
-        
+
         LinkedList<Integer> ll = new LinkedList<Integer>();
 
         ll.add(1);
@@ -44,7 +44,7 @@ public class LinkedLists {
 
         // IndexOutOfBoundsException : Index 4 doesn't exist
         // ll.add(4,7);
-        
+
         out.println("\n====== Converting LinkedList to Array ======");
         Integer[] arrList = ll.toArray(new Integer[ ll.size() ]);
         out.println("arrList:\t" +   Arrays.toString( arrList ) );
@@ -85,5 +85,5 @@ public class LinkedLists {
         ll.clear();
         out.println( Arrays.toString (ll.toArray() ));
     }
-    
+
 }

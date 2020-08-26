@@ -1,4 +1,4 @@
-package edu.usfca.collections_util;
+package edu.usfca.collections_util.lists;
 
 import java.util.ArrayList;
 
