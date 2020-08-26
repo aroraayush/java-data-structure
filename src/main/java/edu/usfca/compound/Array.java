@@ -1,6 +1,8 @@
 package edu.usfca.compound;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 
 // Java arrays can be used as a static field, a local variable or a method parameter
 // The size of an array must be specified by an int value and not long or short
@@ -23,16 +25,13 @@ import static java.lang.System.out;
 
 public class Array {
     public static void main(String[] args) {
+        
+        // int could be replaced with byte, short, boolean, long, float, double, char
         int[] intArray;
-        byte[] byteArray;
-        short[] shortsArray;
-        boolean[] booleanArray;
-        long[] longArray;
-        float[] floatArray;
-        double[] doubleArray;
-        char[] charArray;
+        int[] arr = new int[]{1,2,3};
+        
 
-        // an array of references to objects
+        // an array of references to objects (Stored in heap)
         MyClass[] myClassArray;     // Class defined below
         Object[]  objectArr;       // array of Object
         // Collection[] a;

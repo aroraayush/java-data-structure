@@ -21,7 +21,9 @@ package edu.usfca.collections_util;
 
 import static java.lang.System.out;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.LinkedList;
 
 public class LinkedLists {
@@ -29,24 +31,59 @@ public class LinkedLists {
     private static boolean returnResult;
     public static void main(String[] args) {
         
-        LinkedList<String> ll = new LinkedList<String>();
+        LinkedList<Integer> ll = new LinkedList<Integer>();
 
-        ll.add("String1");
+        ll.add(1);
 
         // returnResult : true
-        returnResult = ll.add("String2");
+        returnResult = ll.add(2);
 
         // Adding at index
         // add(int index, Object element)
-        ll.add(2,"String3");
+        ll.add(2,3);
 
-        // IndexOutOfBoundsException : Index doesn't exist
-        // ll.add(4,"String3");
+        // IndexOutOfBoundsException : Index 4 doesn't exist
+        // ll.add(4,7);
+        
+        out.println("\n====== Converting LinkedList to Array ======");
+        Integer[] arrList = ll.toArray(new Integer[ ll.size() ]);
+        out.println("arrList:\t" +   Arrays.toString( arrList ) );
 
-        // Printing LinkedList
-        out.println(    Arrays.toString(    ll.toArray()    )   );
+        out.println("\n====== Printing LinkedList ======");
 
-        out.println("Hello world");
+        out.println(    Arrays.toString( ll.toArray() ) );
+
+        out.println("\n====== addAll(Collection c) ======");
+        Collection collection = new ArrayList();
+        collection.add(8);
+        collection.add(9);
+        ll.addAll(collection);
+        out.println( Arrays.toString (ll.toArray() ));
+        out.println(    Arrays.toString( ll.toArray() ) );
+
+
+        out.println("\n======  addAll(int index, Collection c) ======");
+        Collection collection2 = new ArrayList();
+        collection2.add(10);
+        collection2.add(11);
+        ll.addAll(2,collection2);
+        out.println( Arrays.toString (ll.toArray() ));
+
+
+        out.println("\n======  addFirst(Object o) ======");
+        ll.addFirst(15);
+        out.println( Arrays.toString (ll.toArray() ));
+
+
+        out.println("\n======  addLast(Object o) ======");
+        ll.addLast(0);
+        out.println( Arrays.toString (ll.toArray() ));
+        out.println( Arrays.toString (ll.toArray() ));
+
+
+        out.println("\n======  clear() ======");
+        ll.clear();
+        out.println( Arrays.toString (ll.toArray() ));
     }
     
 }
