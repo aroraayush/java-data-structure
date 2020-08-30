@@ -23,6 +23,11 @@ SPECIFIER | APPLIES TO                                     | OUTPUT             
           |                                                |
 %x        | integer (incl. byte, short, int, long, bigint) | Hex string.                                                                           |
 */
+
+// Argument Index
+// Syntax : %index$
+// Example : format("%2$s", 32, "Hello"); // prints: "Hello"
+
 public class Strings {
     public static void main(String[] args) {
         out.println("=========== String.format ===========");
@@ -31,5 +36,39 @@ public class Strings {
 
         out.println("=========== printf (%n to be specicified at end) ===========");
         out.printf("name : %s %nage : %d%n", "Jason",25);
+
+        out.println("=========== Specifying a width / Right Justification ===========");
+        out.println(format("||%20d||", 93));                    // ||                  93||
+
+        out.println("=========== Specify Field Length (for String) ===========");
+        out.println(format("|%15s|", "Hello World"));           // |    Hello World|
+
+        out.println("=========== Left-justifying within the specified width ===========");
+        out.println(format("||%-20d||", 93));                   // ||93                  ||
+        out.println(format("|%15s|", "Hello World"));           // |    Hello World|
+
+        out.println("=========== Left-justifying (String) ===========");
+        out.println(format("||%-20s||", "Hello World"));        // ||Hello World         ||
+
+        out.println("=========== Pad with zeros (18 zeroes + 2 digits(93)) = 20 digits ===========");
+        out.println(format("||%020d||", 93));                   // prints: |00000000000000000093|
+
+        out.println("=========== locale-specific thousands separator ===========");
+        out.println(format("%,d", 10000000));         // 10,000,000
+
+        out.println("=========== Octal output ===========");
+        out.println(format("%o", 93)); // prints: 135
+
+        out.println("=========== hex numbers with leading “0x“ ===========");
+        out.println(format("%#x",93)); // 0x5d
+
+        out.println("=========== hex numbers with 10 leading “0x“ ===========");
+        out.println(format("%1$05x",93)); // 0x5d
+        // %1 means these flags are for the first argument.
+        // $ separates the argument index from the flags
+        // 0 padding
+        // 5 bit width
+        // x would convert to hex and use lowercase letters. 'X' uses uppercase letters
+        
     }
 }
