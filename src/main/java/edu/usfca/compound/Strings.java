@@ -9,9 +9,10 @@ SPECIFIER | APPLIES TO                                     | OUTPUT             
 %b        | Any type                                       | “true” if non-null, “false” if null                                                   |
 %c        | character                                      | Unicode character                                                                     |
 %d        | integer (incl. byte, short, int, long, bigint) | Decimal Integer                                                                       |
-%e        | floating point                                 | decimal number in scientific notation                                                 |
-%f        | floating point                                 | decimal number                                                                        |
-%g        | floating point                                 | decimal number, possibly in scientific notation depending on the precision and value. |
+%e        | floating point, double                         | decimal number in scientific notation                                                 |
+%f        | floating point, double                         | decimal number                                                                        |
+%.2f      | floating point, double (2 decimal places)      | decimal number                                                                        |
+%g        | floating point, double                         | decimal number, possibly in scientific notation depending on the precision and value. |
 %h        | any type                                       | Hex String of value from hashCode() method.                                           |
 %n        | none                                           | Platform-specific line separator.                                                     |
 %o        | integer (incl. byte, short,	                   | Octal number                                                                          |
