@@ -25,8 +25,9 @@ SPECIFIER | APPLIES TO                                     | OUTPUT             
 %x        | integer (incl. byte, short, int, long, bigint) | Hex string.                                                                           |
 */
 
-// Argument Index
-// Syntax : %index$
+// Argument Index (%index$)
+
+// Arg1 = 32, Arg2 = "Hello"
 // Example : format("%2$s", 32, "Hello"); // prints: "Hello"
 
 public class Strings {
