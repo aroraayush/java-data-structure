@@ -33,7 +33,10 @@ Examine | getFirst()           | peekFirst()   | getLast()           | peekLast(
 // deque.size()
 
 import java.util.Deque;
+import java.util.HashSet;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 import static java.lang.System.out;
 
@@ -43,7 +46,20 @@ public class Deque_ArrayDeque_util {
         deque.addFirst("a");
         deque.addLast("b");
         deque.addLast("c");
+        deque.addLast("b");
         out.println(deque);
         out.println(deque.size());
+
+        out.println("\n======= Deque to ArrayList =======");
+        ArrayList<String> arr2 = new ArrayList<>();
+        arr2.addAll(deque);
+        out.println("Deque to ArrayList : " + arr2);
+
+        out.println("\n======= Deque to HashSet =======");
+        HashSet<String> set = new HashSet<>();
+        set.addAll(deque);
+        out.println("Deque to HashSet : " + set);
+        
+        
     }
 }
