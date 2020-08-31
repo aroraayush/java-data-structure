@@ -29,6 +29,9 @@ Examine | getFirst()           | peekFirst()   | getLast()           | peekLast(
 --------------------------------------------------------------------------------------
 */
 
+// Size:
+// deque.size()
+
 import java.util.Deque;
 import java.util.ArrayDeque;
 
@@ -41,6 +44,6 @@ public class Deque_ArrayDeque_util {
         deque.addLast("b");
         deque.addLast("c");
         out.println(deque);
-
+        out.println(deque.size());
     }
 }
