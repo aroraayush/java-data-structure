@@ -53,5 +53,10 @@ public class ArrayLists {
         Collections.sort(arrayList);
         out.println(arrayList); // [1, 2, 6, 7]
 
+        out.println("===== subList (Slicing, End Index not included)======");
+        // End Index not included
+        List<Integer> list4 = arrayList.subList(2,4);
+        out.println(list4); // [6, 7]
+
     }
 }
