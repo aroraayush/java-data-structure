@@ -36,6 +36,7 @@ public class ArrayLists {
         Integer[] arr2 = {6 , 7};
 
         // Existing ArrayList and List cannot be added directly
+        // unless of String type
         boolean b =  Collections.addAll(arrayList, arr2);
         out.println("Added - " + b);    // true
         out.println(arrayList);         // [1, 2, 3, 4, 6, 7]
