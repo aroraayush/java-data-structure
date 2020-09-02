@@ -54,7 +54,7 @@ public class LinkedLists {
         out.println(    Arrays.toString( ll.toArray() ) );
 
         out.println("\n====== addAll(Collection c) ======");
-        Collection collection = new ArrayList();
+        Collection<Integer> collection = new ArrayList();
         collection.add(8);
         collection.add(9);
         ll.addAll(collection);
@@ -63,7 +63,7 @@ public class LinkedLists {
 
 
         out.println("\n======  addAll(int index, Collection c) ======");
-        Collection collection2 = new ArrayList();
+        Collection<Integer> collection2 = new ArrayList();
         collection2.add(10);
         collection2.add(11);
         ll.addAll(2,collection2);
